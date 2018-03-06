@@ -1,0 +1,523 @@
+body, 
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #424242;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0; 
+}
+
+header,
+nav, 
+footer, 
+section, 
+article, 
+div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/*
+ *
+ * Common
+ * 
+ */
+
+.news__more {
+  float: right;
+  font-size: .8em;
+  color: #333;
+  text-decoration: none;
+}
+
+
+/*
+ *
+ * Header
+ *
+ */
+
+.header {  
+  min-height: 56px;
+  transition: min-height 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header__inner {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__menu-toggle {
+  display: none;
+}
+
+.header__logo {
+  height: 72px;
+  margin-right: 1em;
+  vertical-align: top;
+  margin-top: 12px;
+}
+
+.header__title {
+  font-weight: 300;
+  font-size: 4em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+  color: #212121;
+}
+
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #616161;
+  padding: 1.5em;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #212121;
+}
+
+
+/*
+ *
+ * Main
+ *
+ */
+
+main {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ *
+ * Content
+ *
+ */
+ .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+ *
+ * Hero
+ *
+ */
+
+.hero {
+  width: 100%;
+  position: relative;
+  background-image: url("./images/dog.jpg");
+  background-size: cover;
+  height: 300px;
+}
+
+.hero article {
+  box-sizing: border-box;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  color: #fff;
+  padding: 1em;
+}
+
+
+/*
+ *
+ * Top News
+ *
+ */
+
+.top-news {
+  height: 300px;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em;
+  width: 100%;
+}
+
+.news__title {
+  font-weight: 300;
+  border-bottom: 1px solid #E0E0E0;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.top-news__item {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em 0;
+  line-height: 19.2px;
+}
+
+.top-news__item:before {
+  content: "» ";
+}
+
+.top-news__item:last-child {
+  border-bottom: none;
+}
+
+.top-news__item a {
+  text-decoration: none;
+  color: #666;
+}
+
+.top-news__item a:hover,
+.top-news__item a:active {
+  text-decoration: underline;
+}
+
+
+/*
+ *
+ * Sport Scores
+ *
+ */
+
+.scores {
+  padding-top: 1em;
+  width: 100%;
+}
+
+.scores__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scores__table th,
+.scores__table td {
+  padding: 1em; 
+}
+
+.scores__table th {
+  color: #fff;
+  font-weight: 300;
+  background-color: #78909C;
+}
+
+.scores__table tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+.scores__table tr:nth-child(even) td {
+  background-color: #eceff1;
+}
+
+.scores__table td.winner {
+  font-weight: bold;
+}
+
+.scores__table td:nth-child(3) {
+  text-align: right;
+}
+
+.scores__table td:nth-child(2),
+.scores__table td:nth-child(5) {
+  text-align: center;
+}
+
+/*
+ *
+ * Weather
+ *
+ */
+
+.weather {
+  padding: 1em;
+}
+
+.weather__location {
+  display: block;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.weather__desc {
+  display: block;
+  font-size: 1.2em;
+}
+
+.weather__today {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.weather__today__image {
+  vertical-align: middle
+}
+
+.weather__today__temp {
+  font-size: 3em;
+}
+
+.weather__today__deg {
+  font-size: 2em;
+  display: inline;
+}
+
+.weather__next__item {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+
+.weather__next__item span {
+  display: block;
+}
+
+.weather__next__image {
+  width: 100%;
+}
+
+
+/*
+ *
+ * Recent News
+ *
+ */
+
+.recent-news {
+  clear: both;
+  padding: 1em;
+}
+
+.snippet {
+  clear: both;
+  margin: 24px 0;
+}
+
+.snippet__thumbnail {
+  width: 100px;
+  float: left;
+  margin-right: 1em;
+}
+
+.snippet__title {
+  font-weight: 500;
+}
+
+.snippet__title a {
+  text-decoration: none;
+  color: #666;
+}
+
+.snippet__title a:hover,
+.snippet__title a:active {
+  text-decoration: underline;
+}
+
+
+/*
+ *
+ * Footer
+ *
+ */
+
+footer {
+  border-top: 1px solid #E0E0E0;
+  padding: 1em;
+  width: 100%;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  padding: 1.5em;
+}
+
+@media (max-width: 576px) {
+  .header {
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+  }
+  .main {
+    z-index: 0;
+  }
+  .header__inner {
+    box-shadow: none;
+    width: 70%;
+    display: flex;
+    align-items: center;
+  }
+  .header__title {
+    font-size: 2.5em;
+    font-weight: 400;
+  }
+  .nav {   
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    background: linear-gradient(to right, white, white,rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.5),transparent)
+  }
+ .nav__list {
+    display: flex;
+    flex-direction: column; 
+  } 
+  .header__menu-toggle {
+    display: unset;
+    width: 66px;
+    height: 56px;
+    font-size: 30px;
+    color: #6F85BF;
+    background-color: #33B679;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .nav {
+    display: none;
+  }
+  .nav.show {
+    display: block;
+  }
+  .weather {
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #E0E0E0;
+  }
+  .weather__next {
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 577px) {
+  .weather {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #E0E0E0;
+  }
+  .weather__location, .weather__desc {
+    width: 100%;
+  }
+  .weather__today {
+    width: 40%;
+  }
+  .weather__next {
+    width: 60%;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 992px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .scores__table tr td:first-child {
+    text-align: center;
+  }
+  .top-news {
+    width: 50%;
+    border-bottom: none;
+  }
+  .scores {
+    width: 50%;
+  }
+}
+
+@media (min-width: 993px) {
+  .hero {
+    order: 0;
+  }
+
+  .top-news {
+    order: 1;
+    width: 50%;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .weather {
+    order: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .weather__location, .weather__desc {
+    width: 100%;
+    text-align: center;
+  }
+  .weather__today {
+    width: 50%;
+  }
+  .weather__next {
+    padding-top: 1em;
+    border-top: 1px solid #E0E0E0;
+    width: 100%;
+  }
+
+  .scores {
+    order: 3;
+    width: 100%;
+  }
+  .recent-news {
+    order: 4;
+  }
+}
